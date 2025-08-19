@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <!-- Define your log folder -->
+        <Property name="basepath">Logs</Property>
+    </Properties>
+    
+  <Appenders>
+    <!-- Console Appender -->
+    <Console name="CONSOLE" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+      <!-- <PatternLayout pattern="%p - %m%n"/> 
+    
+    <File name="MAIN" fileName="logs/main.log">
+      <JsonTemplateLayout/>
+    </File>
+    <File name="DEBUG_LOG" fileName="logs/debug.log">
+      <PatternLayout pattern="%d [%t] %p %c - %m%n"/>
+    </File>
+    -->
+    
+    <RollingFile name="File"
+    
+                fileName="${basepath}/Logs.log"
+                 filePattern="${basepath}/Logs-%d{yyyy-MM-dd}.log">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <Policies>
+          <SizeBasedTriggeringPolicy size="10 MB"/>
+		    <TimeBasedTriggeringPolicy/>
+      </Policies>
+    </RollingFile>
+  </Appenders>
+    
+    
+<Loggers>
+    <Root level="DEBUG">
+   <!--   <AppenderRef ref="CONSOLE"/> -->
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+
+  
+   <!-- 
+  <Loggers>
+    <Root level="INFO">
+    <AppenderRef ref="CONSOLE" level="WARN"/> 
+      <AppenderRef ref="file"/>
+    </Root>
+    <Logger name="org.example" level="DEBUG">
+      <AppenderRef ref="DEBUG_LOG"/>
+    </Logger>
+  </Loggers>
+  -->
+  
+  
+  
+  
+  
+  
+</Configuration>

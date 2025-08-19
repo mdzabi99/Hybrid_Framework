@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CrossBrowser_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="CrossBrowserTesting(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="TestCase.TC003_LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verify_login" invocation-numbers="0 1 2 3"/>
+        </methods>
+      </class> <!-- TestCase.TC003_LoginTest -->
+    </classes>
+  </test> <!-- CrossBrowserTesting(failed) -->
+</suite> <!-- Failed suite [CrossBrowser_Suite] -->

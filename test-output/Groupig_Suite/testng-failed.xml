@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Groupig_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Group_Test(failed)">
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="TestCase.TC001_AccRegTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verify_Acc_Registration"/>
+        </methods>
+      </class> <!-- TestCase.TC001_AccRegTest -->
+    </classes>
+  </test> <!-- Group_Test(failed) -->
+</suite> <!-- Failed suite [Groupig_Suite] -->

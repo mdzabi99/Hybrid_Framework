@@ -1,0 +1,12 @@
+13:19:20.985 [main] INFO  TestCase.TC001_AccRegTest - ******** starting Execution of HomePage **********
+13:19:24.179 [main] INFO  TestCase.TC001_AccRegTest - ******** starting Execution of Account_Registration Page **********
+13:19:24.288 [main] INFO  TestCase.TC001_AccRegTest - ******** Entering UserName And Password **********
+13:19:24.731 [main] INFO  TestCase.TC001_AccRegTest - ******** Entering Email ID **********
+13:19:24.935 [main] INFO  TestCase.TC001_AccRegTest - ******** Accepting Submit Buttons **********
+13:19:31.129 [main] INFO  TestCase.TC001_AccRegTest - ******** Validating Confirmation Message  **********
+13:19:51.376 [main] INFO  TestCase.TC002_LoginTest - ******** started Execution of HomePage **********
+13:19:51.494 [main] INFO  TestCase.TC002_LoginTest - ******** Suucessfully Entered into Home Page **********
+13:19:54.119 [main] INFO  TestCase.TC002_LoginTest - ******** started Execution of Login Page **********
+13:19:54.506 [main] INFO  TestCase.TC002_LoginTest - ******** Suucessfully Navigated to Login Page **********
+13:19:54.759 [main] INFO  TestCase.TC002_LoginTest - ******** started Execution of MyAccountPage Page **********
+13:19:57.914 [main] INFO  TestCase.TC002_LoginTest - ******** Finished TC002 LoginPage successfully **********
