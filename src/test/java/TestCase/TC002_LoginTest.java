@@ -19,7 +19,7 @@ public class TC002_LoginTest  extends BaseClass {
 	public void verify_login() throws Exception
 	{
 		
-		String path="C:\\Users\\live tech\\eclipse-workspace\\Hybrid\\src\\test\\resources\\config.properties";
+		String path="C:\\Users\\mdjab\\OneDrive\\Documents\\Telegram Desktop\\selenium\\hybrid\\Hybrid_Framework\\src\\test\\resources\\config.properties";
 		FileInputStream file=new FileInputStream(path);
 		Properties	p = new Properties();
 		p.load(file);

@@ -5,12 +5,13 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="TestCase.TC001_AccRegTest">
+      <class name="TestCase.TC002_LoginTest">
         <methods>
+          <include name="verify_login"/>
           <include name="setUp"/>
-          <include name="verify_Acc_Registration"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestCase.TC001_AccRegTest -->
+      </class> <!-- TestCase.TC002_LoginTest -->
     </classes>
   </test> <!-- Group_Test(failed) -->
 </suite> <!-- Failed suite [Groupig_Suite] -->

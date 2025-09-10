@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [CrossBrowser_Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Utilities.ExtenetReportManager"/>
+  </listeners>
   <test thread-count="5" name="CrossBrowserTesting(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="TestCase.TC003_LoginTest">
+      <class name="TestCase.TC004_LoginTest">
         <methods>
-          <include name="setUp"/>
           <include name="verify_login" invocation-numbers="0 1 2 3"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- TestCase.TC003_LoginTest -->
+      </class> <!-- TestCase.TC004_LoginTest -->
     </classes>
   </test> <!-- CrossBrowserTesting(failed) -->
 </suite> <!-- Failed suite [CrossBrowser_Suite] -->
