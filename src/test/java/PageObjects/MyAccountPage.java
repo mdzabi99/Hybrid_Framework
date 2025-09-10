@@ -10,17 +10,21 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class MyAccountPage extends BasePage {
+public class MyAccountPage extends BasePage 
+{
+	
+	
 	public MyAccountPage(WebDriver driver)
 	{
 		super(driver);
 	}
 	
+	@FindBy(xpath="//span[normalize-space()='My Account']") WebElement my_acct;
 	
 	
 	@FindBy(xpath="//h1[text()='My Account']") WebElement MyAccountPage_TxtMsg;
 	
-	@FindBy(xpath="(//a[text()='Logout'])[2]") WebElement LogoutLink;
+	@FindBy(xpath="//ul//a[text()='Logout']") WebElement LogoutLink;
 	
 	JavascriptExecutor js=(JavascriptExecutor)driver;
 	
@@ -40,12 +44,12 @@ public class MyAccountPage extends BasePage {
     
 	public void LogoutMethod() throws InterruptedException
 	{
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		my_acct.click();
 		Thread.sleep(2000);
-		//js.executeScript("arguments[0].click()", LogoutLink);
-		//LogoutLink.click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement loginBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Login']")));
-		loginBtn.click();
+		
+		LogoutLink.click();
+		
 	}
 	
 	
