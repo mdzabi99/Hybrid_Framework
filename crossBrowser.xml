@@ -9,9 +9,9 @@
   <test thread-count="5" name="CrossBrowserTesting">
 	
 	
-<!--	<parameter name="browser" value="chrome"/>-->
-	<parameter name="browser" value="edge"/> 
-     
+	<parameter name="browser" value="chrome"/>
+	<!--<parameter name="browser" value="edge"/> 
+     -->
     <classes>
       <class name="TestCase.TC004_LoginTest"/>
     </classes>

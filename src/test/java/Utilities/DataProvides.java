@@ -8,7 +8,7 @@ public class DataProvides
    @DataProvider(name="LoginData")
 	public String[][] getdata() throws Exception
 	{
-		String path="C:\\Users\\mdjab\\OneDrive\\Documents\\Telegram Desktop\\selenium\\hybrid\\Hybrid_Framework\\Test_Data\\Data_Provider.xlsx";
+		String path="C:\\Users\\mdjab\\OneDrive\\Documents\\TelegramDesktop\\selenium\\hybrid\\Hybrid_Framework\\Test_Data\\Data_Provider.xlsx";
 		
 		ExcelUtility EU=new ExcelUtility(path);
 		int rows=EU.getRowCount("Sheet1");

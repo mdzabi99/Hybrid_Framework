@@ -29,8 +29,9 @@ public class HomePage extends BasePage {
 		lnk_Reg.click();
 	}
 	
-	public void click_Login()
+	public void click_Login() throws InterruptedException
 	{
+		Thread.sleep(2000);
 		Login_Link.click();
 	}
 }

@@ -49,14 +49,14 @@ public class BaseClass
 		switch (br.toLowerCase())  // safer, so "Chrome" or "edge" works
 		{
 		    case "chrome":
-		    	System.setProperty("webdriver.edge.driver", "C:\\Users\\mdjab\\OneDrive\\Documents\\Telegram Desktop\\selenium\\hybrid\\Hybrid_Framework\\config\\chromedriver.exe");
+		    	System.setProperty("webdriver.edge.driver", "C:\\Users\\mdjab\\OneDrive\\Documents\\TelegramDesktop\\selenium\\hybrid\\Hybrid_Framework\\config\\chromedriver.exe");
 		        ChromeOptions chromeOpt = new ChromeOptions();
 		        chromeOpt.setAcceptInsecureCerts(true);
 		        driver = new ChromeDriver(chromeOpt);
 		        break;
 
 		    case "edge":
-		    	System.setProperty("webdriver.edge.driver", "C:\\Users\\mdjab\\OneDrive\\Documents\\Telegram Desktop\\selenium\\hybrid\\Hybrid_Framework\\config\\msedgedriver.exe");
+		    	System.setProperty("webdriver.edge.driver", "C:\\Users\\mdjab\\OneDrive\\Documents\\TelegramDesktop\\selenium\\hybrid\\Hybrid_Framework\\config\\msedgedriver.exe");
 		    	EdgeOptions opt=new EdgeOptions();
 		    	opt.setAcceptInsecureCerts(true);
 		        driver = new EdgeDriver(opt);  // Edge browser driver
@@ -74,7 +74,7 @@ public class BaseClass
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().deleteAllCookies();
 		
-		String path="C:\\Users\\mdjab\\OneDrive\\Documents\\Telegram Desktop\\selenium\\hybrid\\Hybrid_Framework\\src\\test\\resources\\config.properties";
+		String path="C:\\Users\\mdjab\\OneDrive\\Documents\\TelegramDesktop\\selenium\\hybrid\\Hybrid_Framework\\src\\test\\resources\\config.properties";
 		FileInputStream file=new FileInputStream(path);
 		 Properties prop = new Properties();
 		prop.load(file);

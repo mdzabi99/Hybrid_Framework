@@ -1,2 +1,2 @@
-cd  C:\Users\mdjab\OneDrive\Documents\Telegram Desktop\selenium\hybrid\Hybrid_Framework
-mvn clean test
+cd  C:\Users\mdjab\OneDrive\Documents\TelegramDesktop\selenium\hybrid\Hybrid_Framework\
+mvn  test
