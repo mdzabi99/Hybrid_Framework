@@ -28,7 +28,7 @@
             <version>3.1.2</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>DataDriven.xml</suiteXmlFile>
+                    <suiteXmlFile>Grid.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>
