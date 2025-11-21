@@ -53,7 +53,7 @@ public class TC001_AccRegTest extends BaseClass
 		Ar.ClickSubmit();
 		
 		logger.info("******** Validating Confirmation Message  **********");
-		String Actual_Text="YYour1 Account Has Been Created!";
+		String Actual_Text="Your Account Has Been Created!";
 		String confirm_txt=Ar.getConfirmMsg();
 		
 		if (Actual_Text.equals(confirm_txt))
@@ -71,6 +71,7 @@ public class TC001_AccRegTest extends BaseClass
 		}
 		catch(Exception ee)
 		{
+			ee.printStackTrace();
 			logger.error("Test Got Failed");
 			logger.debug("Debug Logs..");;
 			System.out.println("Printing Exception Test Case Got Failed : "+ ee);

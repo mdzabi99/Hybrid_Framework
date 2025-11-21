@@ -74,12 +74,20 @@ package Utilities;
 	        sheet = workbook.getSheet(sheetName);
 	        
 	        row = sheet.getRow(rowNum);
-	        if(row == null) row = sheet.createRow(rowNum);
+	        if(row == null)	
+	        {
+	        	row = sheet.createRow(rowNum);
+	        	cell = row.getCell(colNum);
+	        }
 	        
-	        cell = row.getCell(colNum);
-	        if(cell == null) cell = row.createCell(colNum);
 	        
-	        cell.setCellValue(data);
+	        if(cell == null)
+	        {
+	        	cell = row.createCell(colNum);
+	        	cell.setCellValue(data);
+	        }
+	        
+	        
 	        
 	        fos = new FileOutputStream(filePath);
 	        workbook.write(fos);

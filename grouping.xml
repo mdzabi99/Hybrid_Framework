@@ -3,6 +3,19 @@
 <suite   thread-count="5" name="Groupig_Suite">
 
 
+
+  <groups>
+  <run>
+  <include name="sanity"/>
+    <include name="regression"/>
+  <exclude name="smoke"/>
+  </run>
+  </groups>
+
+<listeners>
+    <listener class-name="Utilities.ExtenetReportManager"/>
+  </listeners>
+ 
   <test name="Group_Test">
 	
 	
@@ -14,7 +27,7 @@
     <classes>
    <!--   <class name="TestCase.TC001_AccRegTest"/> 
 <class name="TestCase.TC002_LoginTest"/>   -->
-   <class name="TestCase.TC003_LoginTest"/>    
+   <class name="TestCase.TC001_AccRegTest"/>    
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

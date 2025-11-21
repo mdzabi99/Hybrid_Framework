@@ -28,14 +28,14 @@ public class ExtenetReportManager implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        // ✅ Correct timestamp (valid for Windows filenames)
+        // Correct timestamp (valid for Windows filenames)
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         repName = "Test_Report_" + timeStamp + ".html";
 
-        // ✅ Ensure Reports folder exists
+        //  Ensure Reports folder exists
         new File(System.getProperty("user.dir") + "\\Reports").mkdirs();
 
-        // ✅ Report file path
+        //  Report file path
         sparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\Reports\\" + repName);
 
         sparkReporter.config().setDocumentTitle("OpenCart Automation Report");
@@ -45,7 +45,7 @@ public class ExtenetReportManager implements ITestListener {
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
 
-        // ✅ System info
+        // System info
         extent.setSystemInfo("Application", "OpenCart");
         extent.setSystemInfo("Module", "ADMIN");
         extent.setSystemInfo("Sub Module", "Customer");
@@ -53,14 +53,14 @@ public class ExtenetReportManager implements ITestListener {
         extent.setSystemInfo("Environment", "QA");
         extent.setSystemInfo("Tester Name", "MD_ZABI");
 
-        // ✅ Fetching from testng.xml <parameter>
+        //  Fetching from testng.xml <parameter>
         String os = context.getCurrentXmlTest().getParameter("os");
         if (os != null) extent.setSystemInfo("Operating System", os);
 
         String browser = context.getCurrentXmlTest().getParameter("browser");
         if (browser != null) extent.setSystemInfo("Browser", browser);
 
-        // ✅ Fetch groups info
+        //  Fetch groups info
         List<String> includedGroups = context.getCurrentXmlTest().getIncludedGroups();
         if (!includedGroups.isEmpty()) {
             extent.setSystemInfo("Groups", includedGroups.toString());
@@ -103,7 +103,7 @@ public class ExtenetReportManager implements ITestListener {
     public void onFinish(ITestContext context) {
         extent.flush(); // ✅ Write all logs to report
 
-        // ✅ Auto open report in browser
+        // Auto open report in browser
         try {
             String pathOfReport = System.getProperty("user.dir") + "\\Reports\\" + repName;
             File extentReport = new File(pathOfReport);

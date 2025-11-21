@@ -1,2 +1,2 @@
-cd  C:\Users\mdjab\OneDrive\Documents\TelegramDesktop\selenium\hybrid\Hybrid_Framework\
+cd  C:/Users/mdjab/git/Hybrid_Framework
 mvn  test

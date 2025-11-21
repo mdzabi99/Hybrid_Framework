@@ -4,14 +4,20 @@
   <test thread-count="5" name="Group_Test(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <exclude name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="TestCase.TC002_LoginTest">
+      <class name="TestCase.TC001_AccRegTest">
         <methods>
-          <include name="verify_login"/>
           <include name="setUp"/>
+          <include name="verify_Acc_Registration"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- TestCase.TC002_LoginTest -->
+      </class> <!-- TestCase.TC001_AccRegTest -->
     </classes>
   </test> <!-- Group_Test(failed) -->
 </suite> <!-- Failed suite [Groupig_Suite] -->

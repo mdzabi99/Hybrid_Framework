@@ -4,16 +4,17 @@
   <listeners>
     <listener class-name="Utilities.ExtenetReportManager"/>
   </listeners>
-  <test thread-count="5" name="CrossBrowserTesting(failed)">
-    <parameter name="browser" value="edge"/>
+  <test thread-count="5" name="CrossBrowserTesting_Linux_Chrome(failed)">
+    <parameter name="os" value="Window"/>
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="TestCase.TC004_LoginTest">
         <methods>
-          <include name="verify_login" invocation-numbers="0 1 2 3"/>
+          <include name="verify_login"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- TestCase.TC004_LoginTest -->
     </classes>
-  </test> <!-- CrossBrowserTesting(failed) -->
+  </test> <!-- CrossBrowserTesting_Linux_Chrome(failed) -->
 </suite> <!-- Failed suite [CrossBrowser_Suite] -->

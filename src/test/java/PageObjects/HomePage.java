@@ -8,7 +8,7 @@ public class HomePage extends BasePage {
 // https://demo.opencart.com/
 	
 	
-	public WebDriver driver;
+	
 	public HomePage(WebDriver driver)
 	{
 		super(driver);

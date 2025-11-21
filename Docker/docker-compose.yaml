@@ -1,0 +1,38 @@
+services:
+  selenium-hub:
+    image: selenium/hub
+    container_name: selenium-hub
+    ports:
+      - "4444:4444" # Exposed main Grid port only
+    networks:
+      - grid
+
+  node-chrome:
+    image: selenium/node-chrome
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      # Tell the Node the hostname of the Hub
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - grid
+
+  node-firefox:
+    image: selenium/node-firefox
+    shm_size: 2gb
+    depends_on:
+      - selenium-hub
+    environment:
+      # Tell the Node the hostname of the Hub
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    networks:
+      - grid
+
+networks:
+  grid:
+    driver: bridge
