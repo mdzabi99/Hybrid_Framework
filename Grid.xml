@@ -8,7 +8,7 @@
  
   <test name="Group_Test">
 	
-           	
+           <parameter name="os" value="windows"/>	
            <parameter name="browser" value="chrome"/>
  
        <classes>
